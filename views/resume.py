@@ -76,8 +76,7 @@ def render():
             
         st.markdown("""
         <div class="contact-info">
-            📍 Diphu, India<br>
-            📧 deshring.info@gmail.com<br>
+            📧 deshring.mail@gmail.com<br>
             📱 +91 8822065302<br>
         </div>
         """, unsafe_allow_html=True)
