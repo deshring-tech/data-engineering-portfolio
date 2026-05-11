@@ -18,5 +18,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          pipx install huggingface_hub
-          huggingface-cli upload Deshring/deshring-portfolio . . --repo-type space --token $HF_TOKEN --exclude ".git/*" ".github/*"
+          git push https://Deshring:$HF_TOKEN@huggingface.co/spaces/Deshring/deshring-portfolio main
