@@ -1,3 +1,14 @@
+---
+title: Deshring Portfolio
+emoji: 🚀
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.32.0
+app_file: app.py
+pinned: false
+---
+
 # 🚀 Data Engineering Portfolio — Deshring Daulaguphu
 
 Welcome to my interactive Data Engineering portfolio! This project showcases a series of production-grade data pipelines, ranging from real-time e-commerce streaming to job market analytics and weather anomaly detection.
