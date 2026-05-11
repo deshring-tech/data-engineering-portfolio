@@ -82,7 +82,7 @@ def render():
         """, unsafe_allow_html=True)
         
         # Resume Download Button
-        pdf_path = "assets/Deshring_Daulaguphu_Resume.pdf"
+        pdf_path = "assets/resume.data"
         if os.path.exists(pdf_path):
             with open(pdf_path, "rb") as pdf_file:
                 st.download_button(
@@ -94,6 +94,7 @@ def render():
         else:
             st.info("💡 Place your PDF resume in 'assets/Deshring_Daulaguphu_Resume.pdf' to enable downloads.")
 
+    with col2:
         st.markdown('<div class="resume-header">Deshring Daulaguphu</div>', unsafe_allow_html=True)
         st.markdown('<div class="resume-subtitle">Data Engineer / Analytics Engineer</div>', unsafe_allow_html=True)
         st.markdown("""
