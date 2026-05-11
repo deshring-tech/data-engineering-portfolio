@@ -82,16 +82,17 @@ def render():
         """, unsafe_allow_html=True)
         
         # Resume Download Button
-        pdf_path = "assets/Deshring_Daulaguphu_Resume.pdf"
-        if os.path.exists(pdf_path):
-            with open(pdf_path, "rb") as pdf_file:
-                st.download_button(
-                    label="📄 Download Resume (PDF)",
-                    data=pdf_file,
-                    file_name="Deshring_Daulaguphu_Resume.pdf",
-                    mime="application/pdf",
-                )
-        else:
+        try:
+            from assets.resume_data import PDF_BASE64
+            import base64
+            pdf_bytes = base64.b64decode(PDF_BASE64)
+            st.download_button(
+                label="📄 Download Resume (PDF)",
+                data=pdf_bytes,
+                file_name="Deshring_Daulaguphu_Resume.pdf",
+                mime="application/pdf",
+            )
+        except ImportError:
             st.info("💡 Place your PDF resume in 'assets/Deshring_Daulaguphu_Resume.pdf' to enable downloads.")
 
     with col2:
