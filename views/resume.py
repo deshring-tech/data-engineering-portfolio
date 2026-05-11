@@ -82,7 +82,7 @@ def render():
         """, unsafe_allow_html=True)
         
         # Resume Download Button
-        pdf_path = "assets/resume.data"
+        pdf_path = "assets/Deshring_Daulaguphu_Resume.pdf"
         if os.path.exists(pdf_path):
             with open(pdf_path, "rb") as pdf_file:
                 st.download_button(
